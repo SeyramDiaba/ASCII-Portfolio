@@ -1,0 +1,61 @@
+$ git checkout HEAD portrait.txt
+$ git add portrait.txt
+$ git commit -m 'eyebrows added'
+On branch master
+Untracked files:
+        house.txt
+
+nothing added to commit but untracked files present
+$ git add -A
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   house.txt
+        modified:   portrait.txt
+        modified:   tree.txt
+
+$ git commit -m 'Final Work'
+[master b94412c] Final Work
+ 3 files changed, 20 insertions(+), 3 deletions(-)
+ create mode 100644 house.txt
+$ git add .
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   house.txt
+        modified:   portrait.txt
+        modified:   tree.txt
+
+$ git reset HEAD house.txt
+Unstaged changes after reset:
+M       house.txt
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   portrait.txt
+        modified:   tree.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   house.txt
+
+$ git commit -m 'modified final'
+[master 28b1411] modified final
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   house.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
